@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="yt.syntax.bungeesocket">
+    <Properties>
+        <property name="fileDate">${date:dd-MM-yyyy}</property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[BungeeSocket] %msg%n</pattern>
+            </PatternLayout>
+        </Console>
+        <File name="LatestLog" append="false">
+            <FileName>plugins/BungeeSocket/logs/latest.log</FileName>
+            <PatternLayout>
+                <pattern>[%d{HH:mm:ss}] [%-4level] [%t - %tid] %c{36} - %msg%n</pattern>
+            </PatternLayout>
+        </File>
+        <File name="Log">
+            <FileName>plugins/BungeeSocket/logs/log-${fileDate}.log</FileName>
+            <PatternLayout>
+                <pattern>[%d{HH:mm:ss}] [%-4level] [%t - %tid] %c{36} - %msg%n</pattern>
+            </PatternLayout>
+        </File>
+        <Async name="Async">
+            <AppenderRef ref="Log"/>
+            <AppenderRef ref="LatestLog"/>
+        </Async>
+    </Appenders>
+    <Loggers>
+        <Root>
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="Async"/>
+        </Root>
+    </Loggers>
+</Configuration>

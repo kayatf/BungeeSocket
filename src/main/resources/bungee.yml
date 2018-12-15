@@ -1,0 +1,7 @@
+name: BungeeSocket
+version: v1.0
+author: Daniel Riegler
+
+description: Execute bukkit commands via bungeecord and vice versa!
+
+main: yt.syntax.bungeesocket.bungee.BungeeSocketPlugin

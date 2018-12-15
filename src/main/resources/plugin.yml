@@ -1,0 +1,12 @@
+name: BungeeSocket
+version: v1.0
+author: Daniel Riegler
+
+description: Execute bungeecord commands via bukkit and vice versa!
+website: https://syntax.yt
+
+main: yt.syntax.bungeesocket.bukkit.BungeeSocketPlugin
+
+commands:
+  bukkitdispatch:
+    description: Send a command to the bungeecord server
