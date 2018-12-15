@@ -44,7 +44,7 @@ public class Helper
     public static final String PLAYER_KEY = "--player=";
 
     /* resource id of the plugin */
-    public static final int SPIGOT_RESOURCE_ID = 38376;
+    public static final int SPIGOT_RESOURCE_ID = 38376; // Todo change resource id to own one haha xd
 
     /**
      * Joins multiple strings together
